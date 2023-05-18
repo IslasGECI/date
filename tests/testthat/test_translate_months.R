@@ -1,6 +1,6 @@
 describe("Prueba cambio de formato en fecha", {
   it("spanish_to_iso", {
-    date_in_spanish <- "1/Abr/2023"
+    date_in_spanish <- "01/Abr/2023"
     obtained_date <- spanish_to_iso(date_in_spanish)
     expected_date <- "2023-04-01"
     expect_equal(obtained_date, expected_date)
