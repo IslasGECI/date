@@ -1,3 +1,3 @@
 library(testthat)
-library(templater)
-test_check("templater")
+library(geci.date)
+test_check("geci.date")
