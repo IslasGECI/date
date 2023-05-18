@@ -44,3 +44,21 @@ install:
 
 tests:
 	Rscript -e "devtools::test(stop_on_failure = TRUE)"
+
+red: format
+	Rscript -e "devtools::test(stop_on_failure = TRUE)" \
+	&& git restore tests/testthat \
+	|| (git add tests/testthat/*.R && git commit -m "🛑🧪 Fail tests")
+	chmod g+w -R .
+
+green: format
+	Rscript -e "devtools::test(stop_on_failure = TRUE)" \
+	&& (git add R/*.R tests/testthat/*.R && git commit -m "✅ Pass tests") \
+	|| git restore R/
+	chmod g+w -R .
+
+refactor: format
+	Rscript -e "devtools::test(stop_on_failure = TRUE)" \
+	&& (git add R/*.R tests/testthat/*.R && git commit -m "♻️  Refactor") \
+	|| git restore R/ tests/testthat/
+	chmod g+w -R .
