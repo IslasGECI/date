@@ -19,6 +19,7 @@ RoxygenNote: 7.2.1
 Suggests:
     devtools,
     roxygen2,
+    stringr,
     testthat
 Type: Package
 Version: 0.1.0
