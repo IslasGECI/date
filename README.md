@@ -2,6 +2,5 @@
 
 # geci.date
 
-## Descripción
-Herramientas para transformar fechas a diferentes formatos e idiomas 
-
+## Description
+Tools for date and time manipulation.
