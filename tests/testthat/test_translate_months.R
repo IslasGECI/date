@@ -11,6 +11,9 @@ describe("Prueba cambio de formato en fecha", {
     date_in_spanish <- "16/Ago/2022"
     obtained_date <- spanish_to_iso(date_in_spanish)
     expected_date <- "2022-08-16"
+    date_in_spanish <- "26/Dic/2012"
+    obtained_date <- spanish_to_iso(date_in_spanish)
+    expected_date <- "2012-12-26"
     expect_equal(obtained_date, expected_date)
   })
 })
